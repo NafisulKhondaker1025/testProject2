@@ -1,20 +1,21 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
     const text = document.getElementById('loadingText')
-    const CIV = document.createElement('a-entity')
+    const model = document.createElement('a-entity')
 
     setTimeout(() => {
 
-      CIV.setAttribute('position', '0 100 1000')
-      CIV.setAttribute('visible', 'false')
-      CIV.setAttribute('scale', '0.0001 0.0001 0.0001')
+      model.setAttribute('position', '0 5000 1000')
+      model.setAttribute('rotation', '0 90 0')
+      model.setAttribute('visible', 'false')
+      model.setAttribute('scale', '0.0001 0.0001 0.0001')
 
-      CIV.setAttribute('gltf-model', '#3dmodel')
+      model.setAttribute('gltf-model', '#3dmodel')
       this.el.sceneEl.appendChild(CIV)
 
-      CIV.addEventListener('model-loaded', () => {
-        CIV.setAttribute('visible', 'true')
-        CIV.setAttribute('animation', {
+      model.addEventListener('model-loaded', () => {
+        model.setAttribute('visible', 'true')
+        model.setAttribute('animation', {
           property: 'scale',
           to: '100 100 100',
           easing: 'easeOutElastic',
