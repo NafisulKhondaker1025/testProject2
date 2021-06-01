@@ -22,8 +22,8 @@ AFRAME.registerComponent('start-tracking', {
         //   dur: 800,
         // })
         mod.setAttribute('animation-mixer', {
-            // clip: 'Animation',
-            // loop: 'repeat'
+            clip: 'Animation',
+            loop: 'repeat'
         })
       })
       text.setAttribute('visible', 'false')
