@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Old Main Video</title>
+
+    <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+    <script src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
+
+    <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+
+    <!-- 8thWall Web - Replace the app key here with your own app key -->
+    <script async src="//apps.8thwall.com/xrweb?appKey=zrb7B4eI3Uj6WTZAfgyWjxi6c5P8Q977o69KFam1rLDl0iBfiFePNUjn3i36pMRvfLX0HA"></script>
+
+    <script src="startTracking.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene
+      start-tracking
+      xrextras-almost-there
+      xrextras-loading
+      xrextras-runtime-error
+      xrweb>
+
+      <a-assets>
+        <a-asset-item id="3dmodel" src="assets/CIV2.glb"></a-asset-item>
+      </a-assets>
+
+      <a-camera
+        position="0 8 0"
+        cursor="
+          fuse: false;
+          rayOrigin: mouse;">
+        <a-entity
+        id="loadingText"
+        text="value: Please move your phone from right to left to calibrate scene;"
+        scale="0.5 0.5 0.5"
+        position="0 0 -1"
+        ></a-entity>
+      </a-camera>
+
+      <a-entity
+        light="type: directional;
+               intensity: 0.8;"
+        position="1 4.3 2.5">
+      </a-entity>
+
+      <a-light type="ambient" intensity="1"></a-light>
+
+      <a-entity
+        id="ground"
+        geometry="primitive: box"
+        material="color: #ffffff; transparent: true; opacity: 0.0"
+        scale="1000 2 1000"
+        position="0 -1 0">
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
