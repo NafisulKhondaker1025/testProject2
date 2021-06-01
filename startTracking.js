@@ -11,7 +11,7 @@ AFRAME.registerComponent('start-tracking', {
       model.setAttribute('scale', '0.0001 0.0001 0.0001')
 
       model.setAttribute('gltf-model', '#3dmodel')
-      this.el.sceneEl.appendChild(CIV)
+      this.el.sceneEl.appendChild(model)
 
       model.addEventListener('model-loaded', () => {
         model.setAttribute('visible', 'true')
