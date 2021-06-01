@@ -5,7 +5,7 @@ AFRAME.registerComponent('start-tracking', {
 
     setTimeout(() => {
 
-      CIV.setAttribute('position', '0 0 0')
+      CIV.setAttribute('position', '0 10 3')
       CIV.setAttribute('visible', 'false')
       CIV.setAttribute('scale', '0.0001 0.0001 0.0001')
 
