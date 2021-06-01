@@ -15,12 +15,13 @@ AFRAME.registerComponent('start-tracking', {
 
       mod.addEventListener('model-loaded', () => {
         mod.setAttribute('visible', 'true')
-        mod.setAttribute('animation', {
-          property: 'scale',
-          to: '100 100 100',
-          easing: 'easeOutElastic',
-          dur: 800,
-        })
+        // mod.setAttribute('animation', {
+        //   property: 'scale',
+        //   to: '100 100 100',
+        //   easing: 'easeOutElastic',
+        //   dur: 800,
+        // })
+        mod.setAttribute('animation-mixer', {})
       })
       text.setAttribute('visible', 'false')
     }, 15000)
