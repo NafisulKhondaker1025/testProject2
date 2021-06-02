@@ -23,7 +23,9 @@ AFRAME.registerComponent('start-tracking', {
         // })
       })
       mod.setAttribute('animation-mixer', {
-        clip: 'Animation'
+        clip: 'Animation',
+        loop: 'repeat',
+        crossFadeDuration: '0.4'
       })
       text.setAttribute('visible', 'false')
     }, 10000)
