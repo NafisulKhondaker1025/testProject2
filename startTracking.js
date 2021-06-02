@@ -10,7 +10,6 @@ AFRAME.registerComponent('start-tracking', {
       mod.setAttribute('visible', 'false')
       mod.setAttribute('scale', '100 100 100')
       mod.setAttribute('animation-mixer', {
-        clip: 'Animation',
         loop: 'repeat',
         crossFadeDuration: '0.4'
       })
