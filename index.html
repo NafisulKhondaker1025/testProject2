@@ -18,14 +18,13 @@
 
   <body>
     <a-scene
-      start-tracking
       xrextras-almost-there
       xrextras-loading
       xrextras-runtime-error
       xrweb>
 
       <a-assets>
-        <a-asset-item id="3dmodel" src="assets/jellyfish2.0.glb"></a-asset-item>
+        <a-asset-item id="3dmodel" src="assets/Spaceship.glb"></a-asset-item>
       </a-assets>
 
       <a-camera
@@ -48,6 +47,15 @@
       </a-entity>
 
       <a-light type="ambient" intensity="1"></a-light>
+
+      <a-entity
+        id="mod"
+        gltf-model="#3dmodel"
+        scale="100 100 100"
+        rotation="0 90 0"
+        position="0 500 -1000"
+        animation-mixer>
+      </a-entity>
 
       <a-entity
         id="ground"
