@@ -5,7 +5,7 @@ AFRAME.registerComponent('start-tracking', {
 
     setTimeout(() => {
 
-      mod.setAttribute('position', '0 -100 1000')
+      mod.setAttribute('position', '0 100 -1000')
       mod.setAttribute('rotation', '0 90 0')
       mod.setAttribute('visible', 'false')
       mod.setAttribute('scale', '100 100 100')
