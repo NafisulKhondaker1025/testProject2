@@ -2,7 +2,7 @@
 AFRAME.registerComponent('pinch-scale', {
     schema: {
       min: {default: 0.1},
-      max: {default: 50}
+      max: {default: 100}
     },
     init: function() {
       const container = document.getElementById('container')
