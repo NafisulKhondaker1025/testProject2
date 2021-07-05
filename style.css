@@ -1,0 +1,7 @@
+#container {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  padding: 2px 2px;
+  border: 2px solid #FF0000;
+}

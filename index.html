@@ -2,64 +2,85 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Butterfly</title>
+    <title>CIV Scale Test</title>
 
-    <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
-    <script defer src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
-    <script src="//cdn.8thwall.com/web/aframe/aframe-extras-4.2.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
+    <!-- slightly modified version of A-Frame -->
+    <script src="//cdn.8thwall.com/web/aframe/8frame-1.1.0.min.js"></script>
+
+    <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
+         See github.com/8thwall/web/tree/master/xrextras -->
     <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
 
-    <!--App Key-->
+    <!-- 8thWall Web app key -->
     <script async src="//apps.8thwall.com/xrweb?appKey=eByLX6OTQTfSKCCW8kiWoUbrmeMRw0sKoImo40cMp6Oh98hgmy9Bl4gEC6zavfAISXsnHp"></script>
 
+    <script src="gesture-detector.js"></script>
+    <script src="hold-drag.js"></script>
+    <script src="two-finger-spin.js"></script>
+    <script src="pinch-scale.js"></script>
+    <script src="change-opacity.js"></script>
   </head>
+
   <body>
 
+    <div id="container">Scale: 0.1</div>
 
     <a-scene
+      gesture-detector
       xrextras-almost-there
       xrextras-loading
       xrextras-runtime-error
+      renderer="colorManagement: true"
       xrweb>
 
       <a-assets>
-        <a-asset-item id="3dmodel" src="assets/Butterfly.glb"></a-asset-item>
+        <a-asset-item id="3dmodel" src="Assets/CIVfw.glb"></a-asset-item>
       </a-assets>
 
       <a-camera
         id="camera"
-        position="0 8 8"
+        position="0 0 0"
         raycaster="objects: .cantap"
-        cursor="
-          fuse: false;
-          rayOrigin: mouse;">
+        cursor="fuse: false; rayOrigin: mouse;">
       </a-camera>
 
       <a-entity
-        light="type: directional;
-               intensity: 0.8;"
-        position="1 4.3 2.5">
+        light="
+          type: directional;
+          intensity: 0.8;
+          castShadow: true;
+          shadowMapHeight:2048;
+          shadowMapWidth:2048;
+          shadowCameraTop: 10;
+          target: #model;"
+        xrextras-attach="target: model; offset: 1 15 3;"
+        shadow>
       </a-entity>
 
-      <a-light type="ambient" intensity="1"></a-light>
+      <a-light type="ambient" intensity="0.7"></a-light>
 
       <a-entity
         id="model"
         gltf-model="#3dmodel"
-        scale="0.5 0.5 0.5"
-        rotation="0 90 0"
-        position="0 10 -10"
-        animation-mixer>
+        class="cantap"
+        hold-drag
+        two-finger-spin
+        pinch-scale
+        change-opacity
+        scale="0.1 0.1 0.1"
+        shadow="receive: false">
       </a-entity>
 
-      <a-entity
+      <a-plane
         id="ground"
-        geometry="primitive: box"
-        material="color: #ffffff; transparent: true; opacity: 0.0"
-        scale="1000 2 1000"
-        position="0 -1 0">
-      </a-entity>
+        rotation="-90 0 0"
+        width="1000"
+        height="1000"
+        material="shader: shadow"
+        shadow>
+      </a-plane>
     </a-scene>
   </body>
 </html>
