@@ -11,14 +11,8 @@ AFRAME.registerComponent('start-tracking', {
       this.el.sceneEl.appendChild(CIV) 
       CIV.setAttribute('position', '0 0 0')
       CIV.setAttribute('rotation', '0 225 0')
-      CIV.setAttribute('scale', '0.1 0.1 0.1')
+      CIV.setAttribute('scale', '1 1 1')
       CIV.setAttribute('visible', 'true')
-      CIV.setAttribute('animation', {
-        property: 'scale',
-        to: '1 1 1',
-        easing: 'easeOutElastic',
-        dur: 800,
-      })
       text.setAttribute('visible', 'false')
       container.style.display = "none"
     }, 15000)
