@@ -58,12 +58,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
-        document.getElementById('sidebar').style.width = "0";
+        document.getElementById('sidebar').style.height = "0";
         document.getElementById('main').style.display = "block"
     },
 
     openBar: function () {
-        document.getElementById('sidebar').style.width = "150px";
+        document.getElementById('sidebar').style.height = "20%";
         document.getElementById('main').style.display = "none"
     } 
 })
