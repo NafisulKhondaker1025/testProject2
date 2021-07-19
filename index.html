@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>aplane</title>
+    <title>-5 1 0 2</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -31,6 +31,7 @@
       renderer="colorManagement:true"
       xrweb
       start-tracking
+      recenter="recenterDistance: 3; recenterHeight: 1; recenterFactor: 0"
       populate-sidebar>
 
       <a-assets>
@@ -38,10 +39,7 @@
       </a-assets>
 
       <a-camera
-        position="0 1 0"
-        cursor="
-          fuse: false;
-          rayOrigin: mouse;">
+        position="0 2 0">
         <a-entity
         id="loadingText"
         text="value: Please move your phone from right to left to calibrate scene; align: center; "
@@ -68,15 +66,6 @@
 
       <a-light type="ambient" intensity="0.5"></a-light>
       
-      <a-plane 
-        id="ground" 
-        position="0 0 0" 
-        rotation="-90 0 0" 
-        width="1000" 
-        height="1000" 
-        material="shader: shadow" 
-        shadow>
-      </a-plane>
     </a-scene>
   </body>
 </html>
