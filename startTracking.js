@@ -15,6 +15,6 @@ AFRAME.registerComponent('start-tracking', {
       CIV.setAttribute('visible', 'true')
       text.setAttribute('visible', 'false')
       container.style.display = "none"
-    }, 15000)
+    }, 10000)
   }
 })
