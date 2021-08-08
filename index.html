@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>-5 1 0 2</title>
+    <title>USS Arizona Base View</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -14,8 +14,7 @@
     <script async src="//apps.8thwall.com/xrweb?appKey=c3xu97LXoJrlZ46itZ8K9Ap67glv5RTyldmcZyzmwE0I7OZEF59DN8qickXCHkHbwFdAPD"></script>
 
     <script src="startTracking.js"></script>
-    <script src="sidebar.js"></script>
-    <script scr="recenter.js"></script>
+    <script src="recenter.js"></script>
 
   </head>
 
@@ -32,8 +31,7 @@
       renderer="colorManagement:true"
       xrweb
       start-tracking
-      recenter="recenterDistance: 3; recenterHeight: 1; recenterFactor: 0"
-      populate-sidebar>
+      recenter="recenterDistance: 3; recenterHeight: 1; recenterFactor: 0">
 
       <a-assets>
         <a-asset-item id="3dmodel" src="assets/USS3.glb"></a-asset-item>
@@ -55,12 +53,8 @@
       ></xrextras-capture-preview> -->
 
       <a-camera
-        position="0 2 0">
-        <a-entity
-        id="loadingText"
-        text="value: Please move your phone from right to left to calibrate scene; align: center; "
-        scale="0.5 0.5 0.5"
-        position="0 0 -1"></a-entity>
+        id="camera"
+        position="0 1 0">
       </a-camera>
 
       <a-entity
