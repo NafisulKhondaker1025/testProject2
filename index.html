@@ -14,6 +14,7 @@
     <script async src="//apps.8thwall.com/xrweb?appKey=c3xu97LXoJrlZ46itZ8K9Ap67glv5RTyldmcZyzmwE0I7OZEF59DN8qickXCHkHbwFdAPD"></script>
 
     <script src="startTracking.js"></script>
+    <script src="sidebar.js"></script>
     <script src="recenter.js"></script>
 
   </head>
@@ -21,8 +22,8 @@
   <body>
 
     <div id="container"></div>
-    <!-- <div id="sidebar"></div>
-    <div id="main"></div> -->
+    <div id="sidebar"></div>
+    <div id="main"></div>
 
     <a-scene
       xrextras-almost-there
@@ -37,7 +38,7 @@
         <a-asset-item id="3dmodel" src="assets/USS3.glb"></a-asset-item>
       </a-assets>
       
-      <!-- <xrextras-capture-button capture-mode="standard" visible="false"></xrextras-capture-button>
+      <xrextras-capture-button capture-mode="standard"></xrextras-capture-button>
 
       <xrextras-capture-config
         max-duration-ms="120000"
@@ -50,7 +51,7 @@
         action-button-share-text="Share"
         action-button-view-text="View"
         finalize-text="Exporting..."
-      ></xrextras-capture-preview> -->
+      ></xrextras-capture-preview>
 
       <a-camera
         id="camera"
