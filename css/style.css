@@ -23,7 +23,7 @@ body {
 
 #loadBackground {
     background-color: black !important;
-    background-image: url('assets/logo.png');
+    background-image: url('../assets/logo.png');
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: 170%;
